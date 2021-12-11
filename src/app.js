@@ -21,7 +21,7 @@ app.get('/news', function(req, res){
    getNews('egypt', (err,data)=>{
 
        if( err){
-        res.send(data)
+        res.send(err)
        }
 
        res.render('news',{articles:data.body.articles})
